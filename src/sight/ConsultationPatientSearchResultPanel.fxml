@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="sight.ConsultationPatientSearchResultPanelController" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TableView fx:id="tvSearchResultTable" layoutX="10.0" layoutY="10.0" prefHeight="350.0" prefWidth="580.0" >
+			<columns>
+				<TableColumn fx:id="tbPatientFirstName" prefWidth="220.0" text="First Name" />
+				<!--<TableColumn fx:id="tbPatientMiddleName" prefWidth="160.0" text="Middle Name" />-->
+				<TableColumn fx:id="tbPatientLastName" prefWidth="220.0" text="Last Name" />
+				<TableColumn fx:id="tbPatientSex" prefWidth="69.0" text="Sex" />
+				<TableColumn fx:id="tbPatientAge" prefWidth="69.0" text="Age" />
+			</columns>
+		</TableView>
+		<Button fx:id="btnSelectPatient" mnemonicParsing="false" onAction="#btnSelectPatientPressed" text="Select" layoutX="470.0" layoutY="370.0" prefHeight="20.0" prefWidth="120.0" />
+	</children>
+</Pane>

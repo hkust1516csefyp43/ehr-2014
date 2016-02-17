@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Accordion id="Pane" prefHeight="540.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sight.AdminPanelController">
+	<panes>
+		<TitledPane fx:id="tpUserManagement" animated="false" text="User Management">
+			<content>
+			  <Pane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" text="List of active users:" underline="true" prefHeight="20.0" prefWidth="200.0" />
+						<Button fx:id="btnResetUserPassword" layoutX="410.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" mnemonicParsing="false" onAction="#btnResetUserPasswordPressed" text="Reset Password" />
+						<Button fx:id="btnResetUserTable" layoutX="540.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" mnemonicParsing="false" onAction="#btnResetUserTablePressed" text="Reset Table" />
+						<Button fx:id="btnAddUser" layoutX="670.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnAddUserPressed" text="Add" />
+						<Button fx:id="btnDeactivateUser" layoutX="780.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnDeactivateUserPressed" text="Deactivate" />
+						<TableView fx:id="tvUserManagementTable" layoutX="10.0" layoutY="40.0" prefHeight="300.0" prefWidth="870.0">
+							<columns>
+								<TableColumn fx:id="tbUserName" prefWidth="200.0" text="User Name" />
+								<TableColumn fx:id="tbTriageAccess" prefWidth="80.0" text="Triage" />
+									<!--<graphic>
+										<CheckBox fx:id="accessTriage" mnemonicParsing="false" text="CheckBox" />
+									</graphic>
+								</TableColumn>-->
+								<TableColumn fx:id="tbConsultationAccess" prefWidth="80.0" text="Consultation" />
+								<TableColumn fx:id="tbPharmacyAccess" prefWidth="80.0" text="Pharmacy" />
+								<TableColumn fx:id="tbInventoryAccess" prefWidth="80.0" text="Inventory" />
+								<TableColumn fx:id="tbStatisticsAccess" prefWidth="80.0" text="Statistics" />
+								<TableColumn fx:id="tbSupervisorAccess" prefWidth="80.0" text="Supervisor" />
+								<TableColumn fx:id="tbAdminAccess" prefWidth="80.0" text="Admin" />
+								<TableColumn fx:id="tbUserIsActive" prefWidth="80.0" text="Active" />
+							</columns>
+						</TableView>
+						<Label layoutX="10.0" layoutY="350.0" text="Please click confirm if you made any changes." prefHeight="20.0" prefWidth="500.0" />
+						<Button fx:id="btnConfirm" layoutX="780.0" layoutY="350.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnConfirmUserManagementPressed" text="Confirm" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpKeywordManagement" animated="false" text="Keyword Management" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+			<content>
+				<Pane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="890.0">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="Keyword Type:" />
+						<ComboBox fx:id="cbKeywordType" layoutX="130.0" layoutY="10.0" prefWidth="350.0" />
+						<TextField fx:id="tfKeyword" layoutX="10.0" layoutY="40.0" prefWidth="200.0" />
+						<Button fx:id="btnAddKeyword" layoutX="220.0" layoutY="40.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnAddKeywordPressed" text="Add" />
+						<Button fx:id="btnDeleteKeyword" layoutX="310.0" layoutY="40.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnDeleteKeywordPressed" text="Delete" />
+						<Button fx:id="btnUploadKeyword" layoutX="400.0" layoutY="40.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnUploadKeywordPressed" text="Upload" />
+						<ListView fx:id="lvKeywordList" layoutX="10.0" layoutY="70.0" prefHeight="420.0" prefWidth="470.0" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpSlumManagement" animated="false" text="Slum Management" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+			<content>
+			  <Pane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="890.0">
+					<children>
+						<!--<TextField fx:id="tfSlum" layoutX="10.0" layoutY="10.0" prefWidth="200.0" />
+						<Button fx:id="btnAddSlum" layoutX="220.0" layoutY="10.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnAddSlumPressed" text="Add" />
+						<Button fx:id="btnEditSlum" layoutX="310.0" layoutY="10.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnEditSlumPressed" text="Edit" />
+						<Button fx:id="btnDeleteSlum" layoutX="400.0" layoutY="10.0" prefWidth="80.0" mnemonicParsing="false" onAction="#btnDeleteSlumPressed" text="Delete" />
+						<ListView fx:id="lvSlumList" layoutX="10.0" layoutY="40.0" prefHeight="300.0" prefWidth="470.0" />-->
+						<Button fx:id="btnResetSlumTable" layoutX="140.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" mnemonicParsing="false" onAction="#btnResetSlumTablePressed" text="Reset Table" />
+						<Button fx:id="btnAddSlum" layoutX="270.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnAddSlumPressed" text="Add" />
+						<Button fx:id="btnDeactivateSlum" layoutX="380.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnDeactivateSlumPressed" text="Deactivate" />
+						<TableView fx:id="tvSlumManagementTable" layoutX="10.0" layoutY="40.0" prefHeight="300.0" prefWidth="470.0">
+							<columns>
+								<TableColumn fx:id="tbSlumName" prefWidth="390.0" text="Slum Name" />
+								<TableColumn fx:id="tbSlumIsActive" prefWidth="80.0" text="Is Active" />
+							</columns>
+						</TableView>
+						<Button fx:id="btnConfirm" layoutX="380.0" layoutY="350.0" prefHeight="20.0" prefWidth="100.0" mnemonicParsing="false" onAction="#btnConfirmSlumManagementPressed" text="Confirm" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpDailyReport" animated="false" layoutX="10.0" layoutY="140.0" text="Daily Report" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+			<content>
+				<Pane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="890.0">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="Record Date:" />
+						<DatePicker fx:id="dpDate" layoutX="130.0" layoutY="10.0" />
+						<Button fx:id="btnExportDailyReport" layoutX="800.0" layoutY="10.0" prefWidth="80.0" onAction="#btnExportDailyReportPressed" mnemonicParsing="false" text="Export" />
+						<TableView fx:id="tvDailyReportTable" layoutX="10.0" layoutY="40.0" prefHeight="300.0" prefWidth="870.0" >
+						  <columns>
+							 <TableColumn fx:id="tbPatientName" prefWidth="150.0" text="Patient" />
+							 <TableColumn fx:id="tbSex" prefWidth="50.0" text="Sex" />
+							 <TableColumn fx:id="tbAge" prefWidth="50.0" text="Age" />
+							 <TableColumn fx:id="tbNew" prefWidth="50.0" text="New" />
+							 <TableColumn fx:id="tbHeight" prefWidth="50.0" text="Height" />
+							 <TableColumn fx:id="tbWeight" prefWidth="50.0" text="Weight" />
+							 <TableColumn fx:id="tbChiefComplaint" prefWidth="150.0" text="Chief Complaint" />
+							 <TableColumn fx:id="tbDiagnosis" prefWidth="150.0" text="Clinical Diagnosis" />
+							 <TableColumn fx:id="tbNurse" prefWidth="50.0" text="Nurse" />
+							 <TableColumn fx:id="tbDoctor" prefWidth="50.0" text="Doctor" />
+							 <TableColumn fx:id="tbPharmacist" prefWidth="50.0" text="Pharmacist" />
+						  </columns>
+						</TableView>
+						<Label layoutX="10.0" layoutY="365.0" prefWidth="120.0" text="Total Data:" Underline="true" />
+						<TableView fx:id="tvTotalTable" layoutX="10.0" layoutY="395.0" prefHeight="75.0" prefWidth="870.0" >
+						  <columns>
+							 <TableColumn fx:id="tbPatientSex" prefWidth="100.0" text="Patient" />
+							 <TableColumn fx:id="tbAgeAbove18" prefWidth="100.0" text="Larger than 18" />
+							 <TableColumn fx:id="tbAgeAbove18New" prefWidth="100.0" text="New" />
+							 <TableColumn fx:id="tbAgeBelow18" prefWidth="100.0" text="Small than 18" />
+							 <TableColumn fx:id="tbAgeBelow18New" prefWidth="100.0" text="New" />
+							 <TableColumn fx:id="tbTotalNew" prefWidth="100.0" text="Total New" />
+							 <TableColumn fx:id="tbTotal" prefWidth="100.0" text="Grand Total" />
+						  </columns>
+						</TableView>
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpDatabaseManagement" animated="false" text="Database Management" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+			<content>
+			  <Pane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="890.0">
+					<children>
+						<Button fx:id="btnSynchronize" layoutX="10.0" layoutY="10.0" prefWidth="120.0" mnemonicParsing="false" onAction="#btnSynchronizePressed" text="Synchronize" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+	</panes>
+</Accordion>

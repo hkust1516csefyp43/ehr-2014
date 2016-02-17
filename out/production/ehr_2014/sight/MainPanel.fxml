@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:controller="sight.MainPanelController" fx:id="vsplitpane" dividerPositions="0.1" prefHeight="620" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<items>
+		<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+			<children>
+				<VBox fx:id="vbMainMenu" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+					<children>	
+						<Button fx:id="btnTriage" prefWidth="90.0" mnemonicParsing="false" onAction="#btnTriagePressed" text="Triage" />
+						<Button fx:id="btnConsultation" mnemonicParsing="false" onAction="#btnConsultationPressed" text="Consultation" wrapText="true" />
+						<Button fx:id="btnPharmacy" prefWidth="90.0" mnemonicParsing="false" onAction="#btnPharmacyPressed" text="Pharmacy" wrapText="true" />
+						<Button fx:id="btnAccountSetting" prefWidth="90.0" mnemonicParsing="false" onAction="#btnAccountSettingPressed" text="Account" wrapText="true" />
+						<Button fx:id="btnAdmin" prefWidth="90.0" mnemonicParsing="false" onAction="#btnAdminPressed" text="Admin" wrapText="true" />
+						<!--<ComboBox fx:id="cbSpecialFunction" prefWidth="90.0" layoutX="220.0" layoutY="5.0" prefHeight="20.0" />-->
+						<Button fx:id="btnLogout" prefWidth="90.0" mnemonicParsing="false" onAction="#btnLogoutPressed" text="Logout" wrapText="true" />
+					</children>
+					<padding>
+						<Insets top="10.0" />
+					</padding>
+				</VBox>
+			</children>
+		</AnchorPane>
+		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="850.0" />
+	</items>
+</SplitPane>

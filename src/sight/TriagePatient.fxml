@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Accordion fx:id="aTriagePatient" prefHeight="540.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sight.TriagePatientController">
+	<panes>
+		<TitledPane fx:id="tpPersonalData" animated="true" layoutX="100.0" text="Personal Data">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" text="Last Name:" />
+						<TextField fx:id="tfLastName" layoutX="110.0" layoutY="10.0" prefHeight="20.0" prefWidth="150.0" />
+						<Label fx:id="middleNameLabel" layoutX="200.0" layoutY="10.0" prefHeight="20.0" prefWidth="90.0" text="Middle Name:" />
+						<TextField fx:id="tfMiddleName" layoutX="290.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="First Name:" />
+						<TextField fx:id="tfFirstName" layoutX="110.0" layoutY="40.0" prefHeight="20.0" prefWidth="150.0" />
+
+						<Label layoutX="10.0" layoutY="70.0" prefHeight="20.0" prefWidth="80.0" text="Date of Birth:" />
+						<TextField fx:id="tfDOB_Day" alignment="CENTER" layoutX="110.0" layoutY="70.0" prefHeight="20.0" prefWidth="50.0" promptText="dd" />
+						<Label alignment="CENTER" layoutX="160.0" layoutY="70.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfDOB_Month" alignment="CENTER" layoutX="180.0" layoutY="70.0" prefHeight="20.0" prefWidth="50.0" promptText="mm" />
+						<Label alignment="CENTER" layoutX="230.0" layoutY="70.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfDOB_Year" alignment="CENTER" layoutX="250.0" layoutY="70.0" prefHeight="20.0" prefWidth="50.0" promptText="yyyy" />
+
+						<Label layoutX="10.0" layoutY="100.0" prefHeight="20.0" prefWidth="100.0" text="Age:" />
+						<TextField fx:id="tfAgeYear" layoutX="110.0" layoutY="100.0" prefHeight="20.0" prefWidth="40.0" />
+						<Label fx:id="lAgeYear" layoutX="150.0" layoutY="100.0" prefHeight="20.0" prefWidth="50.0" text=" Year(s)" />
+						<TextField fx:id="tfAgeMonth" layoutX="200.0" layoutY="100.0" prefHeight="20.0" prefWidth="40.0" />
+						<Label fx:id="lAgeMonth" layoutX="240.0" layoutY="100.0" prefHeight="20.0" prefWidth="60.0" text=" Month(s)" />
+						<TextField fx:id="tfAgeDay" layoutX="300.0" layoutY="100.0" prefHeight="20.0" prefWidth="40.0" />
+						<Label fx:id="lAgeDay" layoutX="340.0" layoutY="100.0" prefHeight="20.0" prefWidth="60.0" text=" Day(s)" />
+
+						<Label layoutX="10.0" layoutY="130.0" prefHeight="20.0" prefWidth="100.0" text="Sex:" />
+						<RadioButton fx:id="rbM" layoutX="110.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" text="M">
+							<toggleGroup>
+								<ToggleGroup fx:id="tgSex" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="rbF" layoutX="160.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" text="F" toggleGroup="$tgSex" />
+
+						<Label layoutX="10.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" text="Status:" />
+						<ComboBox fx:id="cbStatus" layoutX="110.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" />
+
+						<Label layoutX="10.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" text="Telephone:" />
+						<TextField fx:id="tfTel1" layoutX="110.0" layoutY="190.0" prefHeight="20.0" prefWidth="40.0" promptText="xxx" />
+						<Label layoutX="150.0" layoutY="190.0" prefHeight="20.0" prefWidth="15.0" text=" - " />
+						<TextField fx:id="tfTel2" layoutX="165.0" layoutY="190.0" prefHeight="20.0" prefWidth="40.0" promptText="xxx" />
+						<Label layoutX="205.0" layoutY="190.0" prefHeight="20.0" prefWidth="15.0" text=" - " />
+						<TextField fx:id="tfTel3" layoutX="220.0" layoutY="190.0" prefHeight="20.0" prefWidth="50.0" promptText="xxxx" />
+						
+						<!--<Label layoutX="10.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" text="Telephone:" />
+						<TextField fx:id="tfTel1" layoutX="110.0" layoutY="190.0" prefHeight="20.0" prefWidth="50.0" promptText="xxx" />
+						<Label layoutX="160.0" layoutY="190.0" prefHeight="20.0" prefWidth="15.0" text=" - " />
+						<TextField fx:id="tfTel2" layoutX="175.0" layoutY="190.0" prefHeight="20.0" prefWidth="50.0" promptText="xxx" />
+						<Label layoutX="225.0" layoutY="190.0" prefHeight="20.0" prefWidth="15.0" text=" - " />
+						<TextField fx:id="tfTel3" layoutX="240.0" layoutY="190.0" prefHeight="20.0" prefWidth="60.0" promptText="xxxx" />-->
+
+						<Label layoutX="10.0" layoutY="230.0" prefHeight="40.0" prefWidth="80.0" text="Address:" />
+						<TextArea fx:id="taAddress" layoutX="110.0" layoutY="220.0" prefHeight="60.0" prefWidth="500.0" WrapText="true" />
+						<Button fx:id="btnFingerprintRegistration" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#btnFingerprintRegistrationPressed" prefHeight="20.0" prefWidth="200.0" text="Fingerprint Registration" />
+
+						<Label fx:id="patientIDLabel" layoutX="720.0" layoutY="10.0" prefHeight="20.0" prefWidth="150.0" text="" />
+						<ImageView fx:id="patientPhoto" fitHeight="250.0" fitWidth="200.0" layoutX="600.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+						<Button fx:id="btnUploadPhoto" layoutX="600.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnUploadPhotoPressed" prefHeight="20.0" prefWidth="100.0" text="Upload" />
+						<Button fx:id="btnPersonalDataNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnPersonalDataNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpVitalSigns" animated="false" text="Vital Signs">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" text="Blood Pressure:" />
+						<TextField fx:id="tfSystolicBloodPressure" layoutX="130.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label alignment="CENTER" layoutX="230.0" layoutY="10.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfDiastolicBloodPressure" layoutX="250.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="360.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" text="mmHg" />
+						<Button fx:id="btnBloodPressureGraph" layoutX="410.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnBloodPressureGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="120.0" text="Pulse Rate:" />
+						<TextField fx:id="tfPulseRate" layoutX="130.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="240.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="bpm" />
+						<Button fx:id="btnPulseRateGraph" layoutX="290.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnPulseRateGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" text="Respiratory Rate:" />
+						<TextField fx:id="tfRespiratoryRate" layoutX="130.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="240.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" text="cmn" />
+						<Button fx:id="btnRespiratoryRateGraph" layoutX="290.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnRespiratoryRateGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="100.0" prefHeight="20.0" prefWidth="100.0" text="Temperature:" />
+						<TextField fx:id="tfTemperature" layoutX="130.0" layoutY="100.0" prefHeight="20.0" prefWidth="100.0" />
+						<RadioButton fx:id="rbCelsius" layoutX="240.0" layoutY="104.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" selected="true" text="°C">
+							<toggleGroup>
+								<ToggleGroup fx:id="tgTemperature" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="rbFahrenheit" layoutX="290.0" layoutY="104.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" text="°F" toggleGroup="$tgTemperature" />
+						<Button fx:id="btnTemperatureGraph" layoutX="370.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnTemperatureGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" text="SPO2:" />
+						<TextField fx:id="tfSpo2" layoutX="130.0" layoutY="130.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="240.0" layoutY="130.0" prefHeight="20.0" prefWidth="100.0" text=" %" />
+						<Button fx:id="btnSpo2Graph" layoutX="290.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnSpo2GraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" text="Weight:" />
+						<TextField fx:id="tfWeight" layoutX="130.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="240.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" text="kg" />
+						<Button fx:id="btnWeightGraph" layoutX="290.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnWeightGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="190.0" prefHeight="20.0" prefWidth="120.0" text="Height:" />
+						<TextField fx:id="tfHeight" layoutX="130.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="240.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" text="cm" />
+						<Button fx:id="btnHeightGraph" layoutX="290.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnHeightGraphPressed" prefHeight="20.0" prefWidth="100.0" text="Graph" />
+						<Label layoutX="10.0" layoutY="220.0" prefHeight="20.0" prefWidth="160.0" text="Last de-worming tablet:" />
+						<TextField fx:id="tfLDT_Month" alignment="CENTER" layoutX="170.0" layoutY="220.0" prefHeight="20.0" prefWidth="50.0" promptText="mm" />
+						<Label alignment="CENTER" layoutX="220.0" layoutY="220.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfLDT_Year" alignment="CENTER" layoutX="240.0" layoutY="220.0" prefHeight="20.0" prefWidth="50.0" promptText="yyyy" />
+						<Button fx:id="btnVitalSignsBack" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnVitalSignsBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+						<Button fx:id="btnVitalSignsNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnVitalSignsNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpChiefComplaint" animated="false" layoutX="100.0" text="Chief Complaint">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" text="Chief Complaint:" />
+						<ComboBox fx:id="cbChiefComplaint" layoutX="130.0" layoutY="10.0" prefHeight="20.0" prefWidth="530.0" />
+						<Button fx:id="btnAddChiefComplaint" layoutX="670.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddChiefComplaintPressed" prefHeight="20.0" prefWidth="100.0" text="Add" />
+						<Button fx:id="btnDeleteChiefComplaint" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteChiefComplaintPressed" prefHeight="20.0" prefWidth="100.0" text="Delete" />
+						<TableView fx:id="tvChiefComplaintTable" layoutX="10.0" layoutY="40.0" prefHeight="470.0" prefWidth="870.0">
+							<columns>
+								<TableColumn fx:id="tbCCDate" prefWidth="120.0" text="Date" />
+								<TableColumn fx:id="tbChiefComplaint" prefWidth="748.0" text="Chief Complaint" />
+							</columns>
+						</TableView>
+						<Button fx:id="btnChiefComplaintBack" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnChiefComplaintBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+						<Button fx:id="btnChiefComplaintNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnChiefComplaintNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpPMHScreening" animated="false" layoutX="100.0" text="Previous Medical History and Screening">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" text="PMH: " />
+						<ComboBox fx:id="cbPMH" layoutX="130.0" layoutY="10.0" prefHeight="20.0" prefWidth="530.0" />
+						<Button fx:id="btnAddPMH" layoutX="670.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddPMHPressed" prefHeight="20.0" prefWidth="100.0" text="Add" />
+						<Button fx:id="btnDeletePMH" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeletePMHPressed" prefHeight="20.0" prefWidth="100.0" text="Delete" />
+						<Label layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="Hyper Tension" />
+						<CheckBox fx:id="cbHyperTension" layoutX="110.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="210.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="Diabetes" />
+						<CheckBox fx:id="cbDiabetes" layoutX="310.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="410.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="Asthma" />
+						<CheckBox fx:id="cbAsthma" layoutX="510.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="610.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="Tuberculosis" />
+						<CheckBox fx:id="cbTuberculosis" layoutX="710.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="10.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" text="Hepatitis A" />
+						<CheckBox fx:id="cbHepA" layoutX="110.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="210.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" text="Hepatitis B" />
+						<CheckBox fx:id="cbHepB" layoutX="310.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="410.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" text="Malaria" />
+						<CheckBox fx:id="cbMalaria" layoutX="510.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="610.0" layoutY="70.0" prefHeight="20.0" prefWidth="100.0" text="HIV" />
+						<CheckBox fx:id="cbHIV" layoutX="710.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<TableView fx:id="tvPMHTable" layoutX="10.0" layoutY="100.0" prefHeight="330.0" prefWidth="970.0">
+							<columns>
+								<TableColumn fx:id="tbPMHDisease" prefWidth="420.0" text="Disease" />
+								<TableColumn fx:id="tbPMHStartDate" prefWidth="150.0" text="Start Date" />
+								<TableColumn fx:id="tbPMHRemissionDate" prefWidth="150.0" text="Remission Date" />
+								<TableColumn fx:id="tbPMHIsUnderTreatment" prefWidth="148.0" text="Under Treatment?" />
+							</columns>
+						</TableView>
+						<Label layoutX="10.0" layoutY="460.0" prefHeight="20.0" prefWidth="100.0" text="Screening: " />
+						<Label layoutX="110.0" layoutY="460.0" prefHeight="20.0" prefWidth="90.0" text="Tobacoo Use" />
+						<CheckBox fx:id="cbTobacco" layoutX="200.0" layoutY="460.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="260.0" layoutY="460.0" prefHeight="20.0" prefWidth="90.0" text="Ethanol Use" />
+						<CheckBox fx:id="cbEthanol" layoutX="350.0" layoutY="460.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="410.0" layoutY="460.0" prefHeight="20.0" prefWidth="90.0" text="Drug Use" />
+						<CheckBox fx:id="cbDrug" layoutX="500.0" layoutY="460.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="560.0" layoutY="460.0" prefHeight="20.0" prefWidth="90.0" text="Ex-Smoker" />
+						<CheckBox fx:id="cbExSmoker" layoutX="650.0" layoutY="460.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="710.0" layoutY="460.0" prefHeight="20.0" prefWidth="90.0" text="Ex-Drug Use" />
+						<CheckBox fx:id="cbExDrug" layoutX="800.0" layoutY="460.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="10.0" layoutY="490.0" prefHeight="20.0" prefWidth="100.0" text="Others:" />
+						<TextField fx:id="tfOtherScreening" layoutX="110.0" layoutY="490.0" prefHeight="20.0" prefWidth="720.0" />
+						<Button fx:id="btnPMHScreeningBack" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnPMHScreeningBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+						<Button fx:id="btnPMHScreeningNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnPMHScreeningNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpDHAllergy" animated="false" layoutX="100.0" text="Drug History and Allergy">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="120.0" text="Drug History:" />
+						<ComboBox fx:id="cbDrugHistory" layoutX="130.0" layoutY="10.0" prefHeight="20.0" prefWidth="530.0" />
+						<Button fx:id="btnAddDrugHistory" layoutX="670.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnAddDrugHistoryPressed" prefHeight="20.0" prefWidth="100.0" text="Add" />
+						<Button fx:id="btnDeleteDrugHistory" layoutX="780.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteDrugHistoryPressed" prefHeight="20.0" prefWidth="100.0" text="Delete" />
+						<TableView fx:id="tvDrugHistoryTable" layoutX="10.0" layoutY="40.0" prefHeight="210.0" prefWidth="870.0">
+							<columns>
+								<TableColumn fx:id="tbDHDate" prefWidth="120.0" text="Date" />
+								<TableColumn fx:id="tbDrugHistory" prefWidth="748.0" text="Drug History" />
+							</columns>
+						</TableView>
+						<Label layoutX="10.0" layoutY="270.0" prefHeight="20.0" prefWidth="120.0" text="Allergy:" />
+						<ComboBox fx:id="cbAllergy" layoutX="130.0" layoutY="270.0" prefHeight="20.0" prefWidth="530.0" />
+						<Button fx:id="btnAddAllergy" layoutX="670.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnAddAllergyPressed" prefHeight="20.0" prefWidth="100.0" text="Add" />
+						<Button fx:id="btnDeleteAllergy" layoutX="780.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnDeleteAllergyPressed" prefHeight="20.0" prefWidth="100.0" text="Delete" />
+						<TableView fx:id="tvAllergyTable" layoutX="10.0" layoutY="300.0" prefHeight="210.0" prefWidth="870.0">
+							<columns>
+								<TableColumn fx:id="tbAllergyDate" prefWidth="120.0" text="Date" />
+								<TableColumn fx:id="tbAllergy" prefWidth="748.0" text="Allergy" />
+							</columns>
+						</TableView>
+						<Button fx:id="btnDHAllergyBack" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnDHAllergyBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+						<Button fx:id="btnDHAllergyNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnDHAllergyNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpFemale" animated="false" text="Pregnancy(Female Only)">
+			<content>
+				<Pane prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<children>
+						<Label layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" text="LMP Date:" />
+						<TextField fx:id="tfLMP_Day" alignment="CENTER" layoutX="130.0" layoutY="10.0" prefHeight="20.0" prefWidth="50.0" promptText="dd" />
+						<Label alignment="CENTER" layoutX="180.0" layoutY="10.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfLMP_Month" alignment="CENTER" layoutX="200.0" layoutY="10.0" prefHeight="20.0" prefWidth="50.0" promptText="mm" />
+						<Label alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="20.0" prefWidth="20.0" text="/" />
+						<TextField fx:id="tfLMP_Year" alignment="CENTER" layoutX="270.0" layoutY="10.0" prefHeight="20.0" prefWidth="50.0" promptText="yyyy" />
+						<Label layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" text="Is Pregnant?:" />
+						<CheckBox fx:id="cbPregnant" layoutX="130.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="170.0" layoutY="40.0" prefHeight="20.0" prefWidth="80.0" text="Gestation:" />
+						<TextField fx:id="tfGestation" layoutX="250.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="350.0" layoutY="40.0" prefHeight="20.0" prefWidth="50.0" text=" week(s)" />
+						<Label layoutX="10.0" layoutY="70.0" prefHeight="20.0" prefWidth="120.0" text="Breast Feeding:" />
+						<CheckBox fx:id="cbBreastFeeding" layoutX="130.0" layoutY="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="10.0" layoutY="100.0" prefHeight="20.0" prefWidth="120.0" text="Contraceptive Use:" />
+						<CheckBox fx:id="cbContraceptive" layoutX="130.0" layoutY="100.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" />
+						<Label layoutX="10.0" layoutY="130.0" prefHeight="20.0" prefWidth="120.0" text="No. of Pregnancy:" />
+						<TextField fx:id="tfNumOfPregnancy" layoutX="130.0" layoutY="130.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0" text="No. of Live Birth:" />
+						<TextField fx:id="tfNumOfLiveBirth" layoutX="130.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="190.0" prefHeight="20.0" prefWidth="120.0" text="No. of Miscarriage:" />
+						<TextField fx:id="tfNumOfMiscarriage" layoutX="130.0" layoutY="190.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="220.0" prefHeight="20.0" prefWidth="120.0" text="No. of Abortion:" />
+						<TextField fx:id="tfNumOfAbortion" layoutX="130.0" layoutY="220.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="250.0" prefHeight="20.0" prefWidth="120.0" text="No. of Still Birth:" />
+						<TextField fx:id="tfNumOfStillBirth" layoutX="130.0" layoutY="250.0" prefHeight="20.0" prefWidth="100.0" />
+						<Label layoutX="10.0" layoutY="280.0" prefHeight="20.0" prefWidth="120.0" text="Other Information:" />
+						<TextField fx:id="tfPregnancyOtherInfo" layoutX="130.0" layoutY="280.0" prefHeight="20.0" prefWidth="700.0" />
+						<Button fx:id="btnFemaleBack" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnFemaleBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+						<Button fx:id="btnFemaleNext" layoutX="780.0" layoutY="520.0" mnemonicParsing="false" onAction="#btnFemaleNextPressed" prefHeight="20.0" prefWidth="100.0" text="Next" />
+					</children>
+				</Pane>
+			</content>
+		</TitledPane>
+
+		<TitledPane fx:id="tpSubmission" animated="false" layoutX="100.0" text="Submission">
+			<content>
+				<ScrollPane fx:id="scrollPane" prefHeight="450.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+					<Pane fx:id="submissionPane" prefWidth="872.0">
+						<children>
+							<Label fx:id="summaryLabel" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="850.0" text="Triage Summary" />
+							<Button fx:id="btnSubmissionTopBack" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSubmissionBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+							<Button fx:id="btnSubmitTop" layoutX="760.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSubmitPressed" prefHeight="20.0" prefWidth="100.0" text="Submit" />
+							<Button fx:id="btnOKTop" layoutX="760.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOKPressed" prefHeight="20.0" prefWidth="100.0" text="OK" visible="false" />
+							<Label fx:id="summaryInstructionLabel" layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="500.0" text="Please make sure the information are correct." />
+							<Button fx:id="btnSubmissionBack" layoutX="10.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnSubmissionBackPressed" prefHeight="20.0" prefWidth="100.0" text="Back" />
+							<Button fx:id="btnSubmit" layoutX="760.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnSubmitPressed" prefHeight="20.0" prefWidth="100.0" text="Submit" />
+							<Button fx:id="btnOK" layoutX="760.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnOKPressed" prefHeight="20.0" prefWidth="100.0" text="OK" visible="false" />
+						</children>
+					</Pane>
+				</ScrollPane>
+			</content>
+		</TitledPane>
+	</panes>
+</Accordion>
